@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<script>
+
+  function mostra(x) {
+
+    document.write(x);
+    pulaLinha();
+
+  }
+
+  function pulaLinha () {
+    document.write("<br>");
+  }
+
+  var anoAtual = 2017;
+  var anoDesc = 1500;
+  var geracao = 28;
+  var qteGera;
+  var anosPassados;
+
+  anosPassados = anoAtual - anoDesc;
+  qteGera = anosPassados/geracao;
+
+  mostra("A quantidade de geracoes passadas desde o descobrimento do Brasil foi igual a: "+ qteGera);
+
+</script>
