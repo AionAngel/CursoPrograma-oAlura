@@ -4,14 +4,30 @@
 
   function mostra (frase) {
 
-    document.write("<br>"+frase+<"<br>");
+    document.write("<br>"+frase+"<br>");
 
   }
 
-  function sorteia(numero) {
+  function sorteia (numero) {
 
     return Math.round(Math.random()* numero);
 
+  }
+
+  mostra("Bem vindo ao jogo para advinhar um numero");
+  var range = parseInt(prompt("O numero sera sorteado de 0 ate o valor digitado, por favor insira um numero"));
+
+  var sorteado = sorteia(range);
+  console.log(sorteado)
+
+  var tentativa = prompt("Humm, ja pensei em um numero, agora insira um numero entre 0 e " + range + " para ver se voce acerta!");
+
+  if (tentativa == sorteado) {
+    mostra("Boa! Voce acertou o numero!");
+  }else if (tentativa < sorteado) {
+    mostra("Seu numero e menor que o sorteado");
+  }else {
+    mostra("Seu numero e maior que o sorteado!");
   }
 
 </script>
